@@ -1,0 +1,35 @@
+
+
+Binary search tree:
+
+			Root
+		      /      \
+		 leftnode   rightnode 
+
+    
+# to remember:	 leftnode < root < rightnode 
+
+Eg:         2
+	  /   \
+	 1     3
+
+
+# Inorder traversal of BST gives a sorted sequence
+
+# worst case T.C => O(Height)
+
+# Delete a node: 
+	case 1) no child(leaf node) 
+	case 2) one child
+	case 3) two children
+
+ 1) no child : delete node and return null to parent
+ 
+ 2) one child : delete node and replace it with child node
+
+ 3) two children : delete node and replace it with inorder successor(leftmost in the right subtree)
+	{ given inorder[1,2,3] : 2 is inoder successor of 1 }
+	- inorder successor always has 0 or 1 child
+
+
+
