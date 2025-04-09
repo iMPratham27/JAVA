@@ -2,7 +2,12 @@
 import java.util.*;
 
 class QuickSort{
-
+	/*
+	Rearrange the elements such that:
+	All elements less than or equal to pivot go to the left
+	All elements greater than pivot go to the right
+	Pivot goes in the middle, at its correct sorted position
+	*/
 	int partition(int arr[], int start, int end){
 	
 		int pivot = arr[end];
@@ -33,8 +38,8 @@ class QuickSort{
 		
 			int pivotIdx = partition(arr,start,end);//in this function, pivotIdx is placed at the correct position
 
+			//Repeat the above steps on the left and right parts of the array, excluding the pivot (it’s already in correct place!).
 			quickSort(arr,start,pivotIdx-1);
-
 			quickSort(arr,pivotIdx+1,end);
 		}
 	}
