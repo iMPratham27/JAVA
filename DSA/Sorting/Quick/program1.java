@@ -3,10 +3,10 @@ import java.util.*;
 
 class QuickSort{
 	/*
-	Rearrange the elements such that:
-	All elements less than or equal to pivot go to the left
-	All elements greater than pivot go to the right
-	Pivot goes in the middle, at its correct sorted position
+		Rearrange the elements such that:
+		All elements less than or equal to pivot go to the left
+		All elements greater than pivot go to the right
+		Pivot goes in the middle, at its correct sorted position
 	*/
 	int partition(int arr[], int start, int end){
 	
@@ -25,6 +25,10 @@ class QuickSort{
 			}
 		}
 
+		/*
+			i is pointing to the last element less than or equal to pivot.
+			So, the correct sorted position for pivot is just after i → which is i+1.
+		*/
 		int temp = arr[i+1];
 		arr[i+1] = arr[end];
 		arr[end] = temp;
