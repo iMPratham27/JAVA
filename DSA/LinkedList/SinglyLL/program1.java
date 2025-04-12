@@ -90,11 +90,9 @@ class LinkedList{
 
 			Node temp = head;
 
-			while(pos-2 != 0){
-		
-				temp = temp.next;
-				pos--;
-			}
+			for(int i=1; i<pos-1; i++){
+                		temp = temp.next;
+            		}
 
 			newNode.next = temp.next;	// here 25 -> 10
 			temp.next = newNode;		// here 20 -> 15
@@ -169,11 +167,9 @@ class LinkedList{
 		
 			Node temp = head;
 
-			while(pos-2 != 0){
-			
-				temp = temp.next;
-				pos--;
-			}
+			for(int i=1; i<pos-1; i++){
+                		temp = temp.next;
+            		}
 
 			temp.next = temp.next.next;
 		}
