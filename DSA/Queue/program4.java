@@ -10,12 +10,21 @@ class StackUsingQueue{
 	void push(int data){
 	
 		int size = q.size();
-		q.add(data);
+		q.add(data); // Add new element at the rear
 
+		// Move all previous elements behind the new one
 		for(int i=0; i<size; i++){
-		
 			q.add(q.poll());
 		}
+		/*
+  			Suppose the queue has: [10, 20, 30] (10 is front).
+			You push 40:
+				Add 40: [10, 20, 30, 40]
+				Rotate previous size elements:
+					Remove 10 and add to rear → [20, 30, 40, 10]
+					Remove 20 and add to rear → [30, 40, 10, 20]
+					Remove 30 and add to rear → [40, 10, 20, 30]
+  		*/
 	}
 
 	int pop(){
@@ -26,7 +35,7 @@ class StackUsingQueue{
 			return -1;
 		}
 
-		return q.poll();
+		return q.poll(); // Removes front
 	}
 
 	int top(){
